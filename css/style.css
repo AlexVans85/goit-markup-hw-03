@@ -37,6 +37,16 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 .nav-flex {
   display: flex;
@@ -141,13 +151,13 @@ ul {
 /* hero */
 .hero {
   background-color: #2f303a;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
   text-align: center;
   height: 600px;
   padding-top: 200px;
   padding-bottom: 280px;
-  padding-left: 452px;
-  padding-right: 452px;
+  /* padding-left: 452px;
+  padding-right: 452px; */
 }
 
 .hero-title {
@@ -181,7 +191,7 @@ ul {
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
-  outline: 3px solid orange;
+  /* outline: 3px solid orange; */
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -323,7 +333,7 @@ ul {
   line-height: 1.62;
   letter-spacing: 0.03em;
   background-color: var(--secondary-bg-color);
-  margin-right: 8px;
+  /*   */
   justify-content: center;
 }
 
@@ -333,8 +343,9 @@ ul {
   background-color: var(--accent-color);
   border: none;
 }
-.filter .title-button:not(:last-child) {
-  margin-right: 0;
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* .filter.title-button:last-child {
@@ -389,22 +400,28 @@ ul {
   margin-bottom: 0;
 }
 
+.container-features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .section {
-  outline: 3px solid olive;
+  /* outline: 3px solid red; */
 }
 
 /* все что ниже это все портфолио */
 .filter {
   display: flex;
+  padding-top: 100px;
 }
 
 .filter {
@@ -419,20 +436,20 @@ ul {
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .work-list .item {
   margin-left: 30px;
   margin-top: 30px;
-  background-color: red;
+  /* background-color: red; */
   width: calc(100% / 3 - 30px);
 }
 
 .container-cards {
-  background-color: yellow;
+  /* background-color: yellow; */
   padding-bottom: 94px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /* .work-list .item:nth-last-child(-n + 3) {
@@ -460,3 +477,9 @@ img {
   margin-top: 0;
   margin-bottom: 4px;
 }
+
+/*  4 домашка */
+.feature-list .item::before {
+  display: block;
+content: "";
+height: 80px;
